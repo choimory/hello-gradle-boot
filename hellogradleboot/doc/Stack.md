@@ -1,4 +1,4 @@
-# Specification
+# Stack
 
 - Java 8
 - Spring Boot 2.3.6
@@ -9,3 +9,4 @@
 - Thymeleaf
 - Bulma (CSS Framework)
 - Vanilla JS (ECMA Script 5)
+- Gradle

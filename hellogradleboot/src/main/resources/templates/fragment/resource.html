@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+	<th:block th:fragment="resourceFragment">
+		<!-- css resources -->
+		<!--<link rel="stylesheet" href="../../static/css/bulma/css/bulma.css"/>-->
+		<link rel="stylesheet" th:href="@{/css/bulma/css/bulma.css}"/>
+		<!-- js resources -->
+		<script th:src="@{/js/common.js}"></script>
+
+		<!-- content's css -->
+		<th:block layout:fragment="css">
+		</th:block>
+		<!-- content's js -->
+		<th:block layout:fragment="js">
+		</th:block>
+	</th:block>
+
+</html>

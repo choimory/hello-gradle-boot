@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">HELLO GRADLE BOOT</title>
+
+		<!-- resources import -->
+		<th:block th:replace="fragment/resource :: resourceFragment">
+		</th:block>
+	</head>
+
+	<body>
+		<!-- start body wrap -->
+		<section id="wrap">	
+								
+			<!-- start header -->
+			<th:block th:replace="fragment/header :: headerFragment">
+			</th:block>
+			<!-- end header -->
+			
+			<article id="middle" class="columns">
+				<!-- start side menu -->
+				<th:block th:replace="fragment/menubar :: menubarFragment">
+				</th:block>
+				<!-- end side menu -->					
+	
+				<!-- start content -->
+				<section class="section">
+					<th:block layout:fragment="content">
+					</th:block>				
+				</section>	
+				<!-- end content -->
+			</article>
+
+			<!-- start footer -->
+			<th:block th:replace="fragment/footer :: footerFragment">
+			</th:block>
+			<!-- end footer -->
+			
+		</section>
+		<!-- end body wrap -->		
+	</body>
+	
+</html>

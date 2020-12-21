@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- layout:decorator를 설정해줘야 해당 속성 값의 html파일 안 지정된 위치에 달라붙음-->
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+		layout:decorate="~{layout/layout}">
+
+	<!-- 해당 페이지 내 고유 css resource -->
+	<th:block layout:fragment="css">
+	</th:block>
+
+	<!-- 해당 페이지 내 고유 js resource -->
+	<th:block layout:fragment="js">
+		<script th:inline="javascript">
+			/*<![CDATA[*/
+				myAlert(/*[[${serviceName}]]*/);				
+			/*]]>*/
+		</script>
+	</th:block>
+
+	<!-- 본문 -->
+	<section id="content" layout:fragment="content">
+		this is <strong th:text="${serviceName}"></strong> join form
+	</section>
+</html>
